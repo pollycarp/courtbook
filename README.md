@@ -9,8 +9,11 @@ A full-stack web application for booking football and tennis courts at a multi-s
 
 ## Live Demo
 
-**Live site:** https://courtbook.infinityfreeapp.com
-**GitHub:** https://github.com/YOUR_USERNAME/courtbook
+| | URL |
+|---|---|
+| **Live Site** | https://courtbook.infinityfreeapp.com/index.php |
+| **Admin Panel** | https://courtbook.infinityfreeapp.com/manage/login.php |
+| **GitHub Repository** | https://github.com/pollycarp/courtbook |
 
 ---
 
@@ -34,7 +37,7 @@ The project was proposed in Task 1 as a practical way to consolidate and extend 
 - **Personal bookings** — "My Bookings" page shows only the logged-in user's reservations
 - **Weekly calendar view** — 7-day × 11-slot colour-coded availability grid; click any free cell to pre-fill the booking form
 
-### Admin Panel (`/admin/`)
+### Admin Panel (`/manage/`)
 - Secure admin login (role-based, separate from user accounts)
 - Dashboard with live stats: total bookings, today, this week, active courts, registered users, most popular court
 - Full bookings table with filters (name, sport, date) and delete capability
@@ -82,7 +85,7 @@ courtbook/
 ├── db_connect.example.php     # Credentials template (see setup below)
 ├── style.css                  # Minimal overrides (Tailwind handles most styling)
 ├── script.js                  # Legacy — superseded by Alpine.js inline logic
-├── admin/
+├── manage/                    # Admin panel (renamed from /admin/ for security)
 │   ├── login.php              # Admin login
 │   ├── logout.php
 │   ├── index.php              # Dashboard with stats
@@ -109,7 +112,7 @@ courtbook/
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/courtbook.git
+git clone https://github.com/pollycarp/courtbook.git
 cd courtbook
 ```
 
@@ -200,7 +203,7 @@ Register at `/register.php`, then promote yourself in phpMyAdmin:
 UPDATE users SET is_admin = 1 WHERE email = 'your@email.com';
 ```
 
-Admin panel is at `/admin/login.php`.
+Admin panel is at `/manage/login.php`.
 
 ### 7. Open the app
 
@@ -216,8 +219,11 @@ http://localhost/courtbook/
 2. Create a MySQL database in the control panel — note the host, name, username, password
 3. Open phpMyAdmin from the control panel and run all migrations
 4. Update `db_connect.php` with the InfinityFree credentials
-5. Upload all files via FTP (FileZilla) into the `htdocs` folder
-6. Visit your subdomain — e.g. `https://courtbook.infinityfreeapp.com`
+5. Upload all files via FTP (FileZilla) directly into the `htdocs` folder (not inside a subfolder)
+6. Visit the live site — https://courtbook.infinityfreeapp.com/index.php
+7. Admin panel — https://courtbook.infinityfreeapp.com/manage/login.php
+
+> **Note:** The admin folder is named `manage/` rather than `admin/` because InfinityFree blocks the directory name `admin` at server level.
 
 ---
 
