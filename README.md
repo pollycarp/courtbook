@@ -247,7 +247,7 @@ This project was built to directly address gaps identified in the Task 1 self-as
 - **Module:** Professional Development (S2-PFD200)
 - **Assessment:** Portfolio — Task 2 (Project Development) & Task 3 (Digital Portfolio)
 - **Submission deadline:** 12 June 2026
-- **Student:** Polycarp Mark
+- **Student:** Florin Iacob
 
 ---
 
